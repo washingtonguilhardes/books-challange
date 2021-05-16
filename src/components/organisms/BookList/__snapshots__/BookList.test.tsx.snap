@@ -5,52 +5,57 @@ exports[`BookList should match with snapshot 1`] = `
   <div
     class="sc-bdnxRM xKovg"
   >
-    <div
-      class="MuiPaper-root MuiCard-root makeStyles-root-1 MuiPaper-elevation1 MuiPaper-rounded"
+    <a
+      href="/book/1"
+      style="height: 100%;"
     >
       <div
-        class="MuiCardMedia-root makeStyles-media-2"
-        style="background-image: url(thumbnail);"
-        title="title"
-      />
-      <div
-        class="MuiCardActions-root"
+        class="MuiPaper-root MuiCard-root makeStyles-root-1 MuiPaper-elevation1 MuiPaper-rounded"
       >
-        <button
-          aria-label="add to favorites"
-          class="MuiButtonBase-root MuiIconButton-root"
-          tabindex="0"
-          type="button"
+        <div
+          class="MuiCardMedia-root makeStyles-media-2"
+          style="background-image: url(thumbnail);"
+          title="title"
+        />
+        <div
+          class="MuiCardActions-root"
         >
-          <span
-            class="MuiIconButton-label"
+          <button
+            aria-label="add to favorites"
+            class="MuiButtonBase-root MuiIconButton-root"
+            tabindex="0"
+            type="button"
           >
-            <svg
-              aria-hidden="true"
-              class="MuiSvgIcon-root"
-              focusable="false"
-              viewBox="0 0 24 24"
+            <span
+              class="MuiIconButton-label"
             >
-              <path
-                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-              />
-            </svg>
-          </span>
-          <span
-            class="MuiTouchRipple-root"
-          />
-        </button>
-      </div>
-      <div
-        class="MuiCardContent-root"
-      >
-        <p
-          class="MuiTypography-root MuiTypography-h5 MuiTypography-colorTextSecondary"
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-colorDisabled"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+        <div
+          class="MuiCardContent-root"
         >
-          title
-        </p>
+          <p
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-colorTextSecondary"
+          >
+            title
+          </p>
+        </div>
       </div>
-    </div>
+    </a>
   </div>
   <div
     class="sc-gtsrHT ZCwxe"

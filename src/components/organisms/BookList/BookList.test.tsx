@@ -1,4 +1,5 @@
 import React from 'react';
+import { MemoryRouter as Router } from 'react-router-dom';
 
 import { render } from '@testing-library/react';
 import events from '@testing-library/user-event';
@@ -9,11 +10,14 @@ describe('BookList', () => {
   it('should match with snapshot', () => {
     const onClickLoadMore = jest.fn();
     const { container, getByText } = render(
-      <BookList
-        books={[{ id: '1', thumbnail: 'thumbnail', title: 'title' }]}
-        favoritesBook={{}}
-        InlineLoaderProps={{ title: 'loadmore', onClick: onClickLoadMore }}
-      />
+      <Router>
+        <BookList
+          books={[{ id: '1', thumbnail: 'thumbnail', title: 'title' }]}
+          favoritesBook={{}}
+          onClickLoadMore={onClickLoadMore}
+          InlineLoaderProps={{ title: 'loadmore' }}
+        />
+      </Router>
     );
 
     const loadmore = getByText(/loadmore/);
