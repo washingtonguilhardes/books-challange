@@ -8,14 +8,25 @@ import { BookListGrid, BookListLoader } from './BookList.styles';
 import { BookListProps } from './BookList.types';
 
 export function BookList(props: BookListProps) {
-  const { books, loading, onClickLoadMore, InlineLoaderProps } = props;
+  const {
+    books,
+    loading,
+    onClickLoadMore,
+    onClickFavorite,
+    favoritesBook,
+    InlineLoaderProps,
+  } = props;
 
   return (
     <>
       <BookListGrid>
         {books.map(book => (
-          <Link to={`/book/${book.id}`} key={book.id}>
-            <BookCard book={book} />
+          <Link to={`/book/${book.id}`} style={{ height: '100%' }} key={book.id}>
+            <BookCard
+              book={book}
+              onClickFavorite={onClickFavorite}
+              favorite={favoritesBook[book.id]}
+            />
           </Link>
         ))}
       </BookListGrid>

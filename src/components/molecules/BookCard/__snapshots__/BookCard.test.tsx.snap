@@ -24,7 +24,7 @@ exports[`BookCard should match with snapshot 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-colorDisabled"
             focusable="false"
             viewBox="0 0 24 24"
           >

@@ -4,6 +4,7 @@ import { Book, BookListResponse } from './books.types';
 
 export class BooksService {
   private static BS_INSTANCE: BooksService;
+  private likedKey = 'liked_books';
 
   static getInstance() {
     if (!BooksService.BS_INSTANCE) {
@@ -26,5 +27,15 @@ export class BooksService {
 
   async getBook(id: string): Promise<Book> {
     return this.client.get<Book>(`/volumes/${id}`).then(({ data }) => data);
+  }
+
+  getLiked() {
+    return JSON.parse(localStorage.getItem(this.likedKey) ?? '{}');
+  }
+  toogleLiked(bookId: string) {
+    const likedBooks = this.getLiked();
+    likedBooks[bookId] = !likedBooks[bookId];
+    localStorage.setItem(this.likedKey, JSON.stringify(likedBooks));
+    return likedBooks;
   }
 }

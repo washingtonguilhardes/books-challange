@@ -6,4 +6,6 @@ export interface BookCardItem {
 
 export interface BookCardProps {
   book: BookCardItem;
+  favorite?: boolean;
+  onClickFavorite?: (id: string) => void;
 }

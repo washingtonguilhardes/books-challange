@@ -1,17 +1,19 @@
 import { createAction, createSlice } from '@reduxjs/toolkit';
-import { Book } from '@src/services';
+import { Book, BooksService } from '@src/services';
 
 import { BooksDataState } from './types';
 
 const initialState = {
   book: { state: 'loading', bookData: null },
   books: { index: 0, list: [], state: 'loading' },
+  favoriteBooks: {},
 } as BooksDataState;
 
 const name = 'booksData';
 
 export const bookDataLoading = createAction(`${name}/book/data/loading`);
 export const bookDataLoaded = createAction(`${name}/book/data/loaded`);
+export const toggleLikedBook = createAction<string>(`${name}/book/liked/toggle`);
 export const booksListLoading = createAction<number>(`${name}/books/list/loading`);
 export const booksListLoaded = createAction<Book[]>(`${name}/books/list/loaded`);
 
@@ -51,6 +53,13 @@ export const books = createSlice({
           state: 'loaded',
           list: action.payload,
         },
+        favoriteBooks: BooksService.getInstance().getLiked(),
+      };
+    });
+    builder.addCase(toggleLikedBook, (state, action) => {
+      return {
+        ...state,
+        favoriteBooks: BooksService.getInstance().toogleLiked(action.payload),
       };
     });
   },

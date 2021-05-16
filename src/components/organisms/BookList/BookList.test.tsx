@@ -11,6 +11,7 @@ describe('BookList', () => {
     const { container, getByText } = render(
       <BookList
         books={[{ id: '1', thumbnail: 'thumbnail', title: 'title' }]}
+        favoritesBook={{}}
         InlineLoaderProps={{ title: 'loadmore', onClick: onClickLoadMore }}
       />
     );

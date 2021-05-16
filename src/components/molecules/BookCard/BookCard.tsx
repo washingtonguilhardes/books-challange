@@ -12,7 +12,7 @@ import { useBookCardStyles } from './BookCard.styles';
 import { BookCardProps } from './BookCard.types';
 
 export function BookCard(props: BookCardProps) {
-  const { book } = props;
+  const { book, onClickFavorite, favorite } = props;
   const { thumbnail, title, id } = book;
   const classes = useBookCardStyles();
 
@@ -25,9 +25,12 @@ export function BookCard(props: BookCardProps) {
           onClick={e => {
             e.preventDefault();
             e.stopPropagation();
-            console.log(id);
+            if (onClickFavorite) {
+              console.log(id);
+              onClickFavorite(id);
+            }
           }}>
-          <FavoriteIcon />
+          <FavoriteIcon color={favorite ? 'primary' : 'disabled'} />
         </IconButton>
       </CardActions>
       <CardContent>
