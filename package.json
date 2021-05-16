@@ -65,7 +65,7 @@
     "eject": "craco eject",
     "lint": "eslint ",
     "lint:fix": "eslint --fix",
-    "prebuild": "yarn lint && yarn test",
+    "prebuild": "yarn lint",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build"
   },
