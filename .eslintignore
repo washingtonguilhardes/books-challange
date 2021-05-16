@@ -8,3 +8,4 @@ package.json
 dist
 .eslintrc.js
 .cracorc.js
+__mock__

@@ -11,3 +11,4 @@ babel*
 lib/
 .eslintrc
 .vscode
+__mocks__
