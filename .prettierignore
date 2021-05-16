@@ -1,0 +1,14 @@
+coverage
+dist
+examples
+node_modules
+package-*.json
+yarn.lock
+scripts
+build
+dist
+babel*
+lib/
+.eslintrc
+.vscode
+__mocks__

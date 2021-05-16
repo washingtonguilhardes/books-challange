@@ -1,0 +1,11 @@
+node_modules
+@types
+src/**/*.test.ts
+babel.config.js
+coverage/
+tsconfig.json
+package.json
+dist
+.eslintrc.js
+.cracorc.js
+__mock__
