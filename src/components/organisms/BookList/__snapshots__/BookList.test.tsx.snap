@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BookList should match with snapshot 1`] = `
+<div>
+  <div
+    class="sc-bdnxRM xKovg"
+  >
+    <div
+      class="MuiPaper-root MuiCard-root makeStyles-root-1 MuiPaper-elevation1 MuiPaper-rounded"
+    >
+      <div
+        class="MuiCardMedia-root makeStyles-media-2"
+        style="background-image: url(thumbnail);"
+        title="title"
+      />
+      <div
+        class="MuiCardActions-root"
+      >
+        <button
+          aria-label="add to favorites"
+          class="MuiButtonBase-root MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiIconButton-label"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+              />
+            </svg>
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+      <div
+        class="MuiCardContent-root"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-h5 MuiTypography-colorTextSecondary"
+        >
+          title
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    class="sc-gtsrHT ZCwxe"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-root-5 makeStyles-root-6 makeStyles-button-3 MuiButton-outlinedPrimary"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        <span
+          class="makeStyles-title-4"
+        >
+          loadmore
+        </span>
+        <div
+          aria-valuenow="100"
+          class="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-determinate"
+          role="progressbar"
+          style="width: 40px; height: 40px; transform: rotate(-90deg);"
+        >
+          <svg
+            class="MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleDeterminate"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="20.2"
+              stroke-width="3.6"
+              style="stroke-dasharray: 126.920; stroke-dashoffset: 0.000px;"
+            />
+          </svg>
+        </div>
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      >
+        <span
+          class="MuiTouchRipple-ripple MuiTouchRipple-rippleVisible"
+          style="width: 2.8284271247461903px; height: 2.8284271247461903px; top: -1.4142135623730951px; left: -1.4142135623730951px;"
+        >
+          <span
+            class="MuiTouchRipple-child MuiTouchRipple-childLeaving"
+          />
+        </span>
+      </span>
+    </button>
+  </div>
+</div>
+`;

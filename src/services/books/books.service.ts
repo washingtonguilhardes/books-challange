@@ -12,7 +12,7 @@ export class BooksService {
     return BooksService.BS_INSTANCE;
   }
 
-  private client = axios.create({ baseURL: process.env.GB_API_URI ?? '' });
+  private client = axios.create({ baseURL: process.env.REACT_APP_GB_API_URI ?? '' });
 
   private maxResults = 16;
 

@@ -37,6 +37,8 @@ module.exports = {
     semi: 'off',
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': ['error'],
     'import-helpers/order-imports': [
       'warn',
       {

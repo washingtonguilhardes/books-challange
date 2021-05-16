@@ -1,3 +1,3 @@
-export default function BookRoutes() {
+export function BookRoutes() {
   return <div>ROUTES</div>;
 }
