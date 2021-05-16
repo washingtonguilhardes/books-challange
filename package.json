@@ -2,7 +2,7 @@
   "name": "books-challange",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://washingtonguilhardes.github.com/books-challange",
+  "homepage": "http://washingtonguilhardes.github.io/books-challange",
   "dependencies": {
     "@craco/craco": "^6.1.2",
     "@material-ui/core": "^4.11.4",
