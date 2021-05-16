@@ -1,5 +1,2 @@
-export class BooksService {
-  listBooks() {
-    return [];
-  }
-}
+export * from './books.service';
+export * from './books.types';
