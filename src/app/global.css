@@ -1,0 +1,16 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-y: none;
+}
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
