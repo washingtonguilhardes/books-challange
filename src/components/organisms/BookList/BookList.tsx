@@ -21,7 +21,10 @@ export function BookList(props: BookListProps) {
     <>
       <BookListGrid>
         {books.map(book => (
-          <Link to={`/book/${book.id}`} style={{ height: '100%' }} key={book.id}>
+          <Link
+            to={`/book/${book.id}`}
+            style={{ height: '100%', width: '100%' }}
+            key={book.id}>
             <BookCard
               book={book}
               onClickFavorite={onClickFavorite}

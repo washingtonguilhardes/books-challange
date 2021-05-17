@@ -32,7 +32,7 @@ export class BooksService {
   getLiked() {
     return JSON.parse(localStorage.getItem(this.likedKey) ?? '{}');
   }
-  toogleLiked(bookId: string) {
+  toggleLiked(bookId: string) {
     const likedBooks = this.getLiked();
     likedBooks[bookId] = !likedBooks[bookId];
     localStorage.setItem(this.likedKey, JSON.stringify(likedBooks));

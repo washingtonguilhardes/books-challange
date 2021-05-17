@@ -1,14 +1,14 @@
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import { HomeRoutes } from '../home/home.routes';
-import { BookRoutes } from './../book/book.routes';
+import { BookPage } from '../book/book.page';
+import { HomePage } from '../home/home.page';
 
 export function AppRoutes() {
   return (
     <Router>
       <Switch>
-        <HomeRoutes />
-        <BookRoutes />
+        <Route component={HomePage} path="/" exact />
+        <Route component={BookPage} path="/book/:id" exact />
       </Switch>
     </Router>
   );

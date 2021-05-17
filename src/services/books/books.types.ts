@@ -24,7 +24,7 @@ export interface VolumeInfo {
   industryIdentifiers: IndustryIdentifier[];
   readingModes: ReadingModes;
   printType: string;
-  categories: string[];
+  categories?: string[];
   maturityRating: string;
   allowAnonLogging: boolean;
   contentVersion: string;
@@ -34,6 +34,8 @@ export interface VolumeInfo {
   previewLink: string;
   infoLink: string;
   canonicalVolumeLink: string;
+  description?: string;
+  authors: string[];
 }
 
 export interface SaleInfo {
