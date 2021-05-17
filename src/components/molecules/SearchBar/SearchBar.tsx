@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import AppBar from '@material-ui/core/AppBar';
 import InputBase from '@material-ui/core/InputBase';
@@ -13,7 +13,9 @@ import { SearchBarProps } from './SearchBar.types';
 
 export function SearchBar(props: SearchBarProps) {
   const { onSubmit, title } = props;
+  const [value, setValue] = useState('');
   const classes = useSearchBarStyles();
+
   return (
     <AppBar position="static">
       <Toolbar>
@@ -26,15 +28,24 @@ export function SearchBar(props: SearchBarProps) {
             <SearchIcon />
           </div>
           <InputBase
+            name="search"
             placeholder="Search…"
-            onChange={ev => onSubmit(ev.target.value)}
+            onChange={ev => setValue(ev.target.value)}
+            onKeyUp={ev => {
+              ev.persist();
+              console.log(ev.key);
+              if (ev.key === 'Enter') {
+                onSubmit(value);
+              }
+            }}
+            value={value}
             classes={{
               root: classes.inputRoot,
               input: classes.inputInput,
             }}
             inputProps={{ 'aria-label': 'search' }}
           />
-          <Button variant="text" textColor="#fff">
+          <Button variant="text" textColor="#fff" onClick={() => onSubmit(value)}>
             SEARCH
           </Button>
         </div>

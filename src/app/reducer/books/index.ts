@@ -5,16 +5,18 @@ import { BooksDataState } from './types';
 
 const initialState = {
   book: { state: 'loading', bookData: null },
-  books: { index: 0, list: [], state: 'loading' },
+  books: { index: 0, list: [], state: 'loading', query: 'a' },
   favoriteBooks: {},
 } as BooksDataState;
 
 const name = 'booksData';
 
 export const bookDataLoading = createAction(`${name}/book/data/loading`);
-export const bookDataLoaded = createAction(`${name}/book/data/loaded`);
+export const bookDataLoaded = createAction<Book>(`${name}/book/data/loaded`);
 export const toggleLikedBook = createAction<string>(`${name}/book/liked/toggle`);
-export const booksListLoading = createAction<number>(`${name}/books/list/loading`);
+export const booksListLoading = createAction<{ index: number; query: string }>(
+  `${name}/books/list/loading`
+);
 export const booksListLoaded = createAction<Book[]>(`${name}/books/list/loaded`);
 
 export const books = createSlice({
@@ -38,14 +40,14 @@ export const books = createSlice({
           bookData: action.payload ?? null,
           state: 'loaded',
         },
+        favoriteBooks: BooksService.getInstance().getLiked(),
       };
     });
     builder.addCase(booksListLoading, (state, action) => ({
       ...state,
-      books: { ...state.books, index: action.payload, state: 'loading' },
+      books: { ...state.books, ...action.payload, state: 'loading' },
     }));
     builder.addCase(booksListLoaded, (state, action) => {
-      console.log('aqui', { action, state });
       return {
         ...state,
         books: {
@@ -59,7 +61,7 @@ export const books = createSlice({
     builder.addCase(toggleLikedBook, (state, action) => {
       return {
         ...state,
-        favoriteBooks: BooksService.getInstance().toogleLiked(action.payload),
+        favoriteBooks: BooksService.getInstance().toggleLiked(action.payload),
       };
     });
   },
